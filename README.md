@@ -16,4 +16,7 @@ Página responsive del producto 6-1427200-4 desarrollada como prueba técnica.
 - CSS3 (Custom CSS)
 - JavaScript (Vanilla)
 
+## Ver en vivo
+
+La página está publicada en GitHub Pages: [Ver página](https://M1M-Metius.github.io/Responsive--Producto-C9200L-24P-4G-E/6-1427200-4.html)
 
