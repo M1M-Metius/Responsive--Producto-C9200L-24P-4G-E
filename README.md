@@ -16,7 +16,4 @@ Página responsive del producto 6-1427200-4 desarrollada como prueba técnica.
 - CSS3 (Custom CSS)
 - JavaScript (Vanilla)
 
-## Ver en vivo
-
-La página está publicada en GitHub Pages: [Ver página](https://[TU-USUARIO].github.io/[TU-REPOSITORIO]/6-1427200-4.html)
 
