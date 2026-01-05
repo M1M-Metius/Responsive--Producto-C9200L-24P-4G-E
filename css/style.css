@@ -1187,6 +1187,17 @@ nav.nav-main .nav-text {
   color: #9ca3af;
 }
 
+.footer-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: #d1d5db;
+  font-size: 0.875rem;
+}
+
 .hidden {
   display: none;
 }
