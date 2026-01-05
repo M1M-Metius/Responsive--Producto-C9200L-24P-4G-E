@@ -3,8 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const staticNav = document.querySelector('.nav-main');
     
     if (navbarPlaceholder) {
-        fetch('./components/navbar.html')
-            .then(response => response.text())
+        const basePath = '/Responsive--Producto-C9200L-24P-4G-E/';
+        const navbarPath = basePath + 'components/navbar.html';
+        
+        fetch(navbarPath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
             .then(data => {
                 navbarPlaceholder.insertAdjacentHTML('afterend', data);
                 if (staticNav) {
@@ -13,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 initializeNavbar();
                 initializeMobileMenu();
                 initializeSearchModal();
-                addDynamicStyles();
+                addDynamicStyles(basePath);
             })
             .catch(error => {
                 console.error('Error loading navbar:', error);
@@ -124,10 +132,13 @@ function initializeSearchModal() {
     });
 }
 
-function addDynamicStyles() {
+function addDynamicStyles(basePath) {
+    const existingLink = document.querySelector('link[href*="navbar.css"]');
+    if (existingLink) return;
+    
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = './css/navbar.css';
+    link.href = basePath + 'css/navbar.css';
     document.head.appendChild(link);
 }
 
